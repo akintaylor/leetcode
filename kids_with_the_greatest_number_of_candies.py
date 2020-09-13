@@ -28,7 +28,7 @@
 
 
 # Solution 1
-def kids_with_candies(candies, extra):
+def kids_with_candies(candies: list, extra: int) -> list:
     most_candies = 0
     result = []
 
@@ -49,7 +49,7 @@ print(kids_with_candies([2, 3, 5, 1, 3], 3))
 
 
 # Solution 2
-def kids_with_candies(candies, extra):
+def kids_with_candies(candies: list, extra: int) -> list:
     sorted_candies = sorted(candies)
     n = len(candies)
     result = []

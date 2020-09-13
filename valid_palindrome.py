@@ -17,7 +17,7 @@
 
 
 # solution 1
-def is_palindrome(s: str):
+def is_palindrome(s: str) -> bool:
     s = ''.join(filter(str.isalnum, s)).lower()
 
     left, right = 0, len(s) - 1
@@ -33,6 +33,6 @@ def is_palindrome(s: str):
 
 
 # solution 2
-def is_palindrome(s: str):
+def is_palindrome(s: str) -> bool:
     s = ''.join(filter(str.isalnum, str)).lower()
     return ''.join(reversed(s)) == s

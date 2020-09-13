@@ -11,7 +11,7 @@
 
 # Note: You may assume the string contains only lowercase English letters.
 
-def first_unique_character(s):
+def first_unique_character(s: str) -> int:
     char_frequency = {}
 
     for char in s:
