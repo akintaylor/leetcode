@@ -31,7 +31,7 @@ def max_depth(root: TreeNode) -> int:
     return 1 + max(max_depth(root.left), max_depth(root.right))
 
 
-# Solution 2 - DFS
+# Solution 2 - BFS
 def max_depth(root: TreeNode) -> int:
     if not root:
         return 0
