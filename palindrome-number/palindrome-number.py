@@ -3,9 +3,8 @@ class Solution:
         result = 0
         
         while number > 0:
-            remainder = number % 10  
+            number, remainder = divmod(number, 10)
             result = (result * 10) + remainder  
-            number = number // 10
             
         return result  
     
