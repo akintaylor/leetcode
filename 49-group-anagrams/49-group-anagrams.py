@@ -1,15 +1,17 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        result = collections.defaultdict(list)
+        hashmap = {}
+        result = []
         
-        for s in strs:
-            char_count = [0] * 26
+        for string in strs:
+            string_sorted = ''.join(sorted(string))
             
-            for char in s:
-                char_count[ord(char) - ord('a')] += 1
+            if hashmap.get(string_sorted) is None:
+                hashmap[string_sorted] = [string]
+            else:
+                hashmap[string_sorted].append(string)
                 
-            result[tuple(char_count)].append(s)
+        for anagram in hashmap.values():
+            result.append(anagram)
             
-        return result.values()
-
-            
+        return result 
