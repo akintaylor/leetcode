@@ -1,11 +1,12 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        lookup_table = {}
+        hashmap = {}
         
-        for index, value in enumerate(nums):
-            complement = target - nums[index]
+        for i in range(len(nums)):
+            number_two = target - nums[i]
             
-            if complement in lookup_table:
-                return [index, lookup_table[complement]]
+            if number_two in hashmap:
+                return [i, hashmap[number_two]]
             
-            lookup_table[nums[index]] = index
+            hashmap[nums[i]] = i
+            
